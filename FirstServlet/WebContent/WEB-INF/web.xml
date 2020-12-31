@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FirstServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <!-- 这儿的意思就是， 我们定义了一个叫first的Servlet,他的实现类是com.imooc.servlet.FirstServletOne-->
+  	<servlet-name>first</servlet-name> <!--servlet-name代表Servlet的别名，可以字节来随意定义，好记，好认就行-->
+  	<servlet-class>com.imooc.servlet.FirstServletOne</servlet-class>    <!-- servlet-class,需要写拿个Servletl类了，不能瞎写 -->
+  </servlet>
+  
+  <!-- servlet-mapping作用是：将Servlet与URL绑定 -->
+  <servlet-mapping>
+  <!--servlet-mapping:Servlet映射；Javaweb应用程序都是通过网址来进行访问的，所以需要把Servlet和网址绑定在一起 -->
+  	<!-- 自然，这儿的servlet-name需要和上面相同，这样才能对应起来 -->
+  	<servlet-name>first</servlet-name>
+  	<!-- 设置url -->
+  	<url-pattern>/hi</url-pattern>
+  </servlet-mapping>
+</web-app>
